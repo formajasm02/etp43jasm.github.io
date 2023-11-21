@@ -7,13 +7,13 @@ import {
     muestraError
   } from "../lib/util.js";
   import {
-    muestraAlumnos
+    muestraSombreros
   } from "./navegacion.js";
   import {
     tieneRol
   } from "./seguridad.js";
   
-  const daoAlumno =
+  const daoSombrero =
     getFirestore().
       collection("Sombrero");
   /** @type {HTMLFormElement} */
@@ -38,26 +38,26 @@ import {
       evt.preventDefault();
       const formData =
         new FormData(forma);
-      const matricula = getString(
-          formData, "matricula").trim();  
-      const nombre = getString(formData, "nombre").trim();
-      const telefono = getString(formData, "telefono").trim();
-      const grupo = getString(formData, "grupo").trim();
+      const color = getString(
+          formData, "color").trim();  
+      const tipo = getString(formData, "tipo").trim();
+      const precio = getString(formData, "precio").trim();
+      const talla = getString(formData, "talla").trim();
       const fecha = getString(formData, "fecha").trim();
       /**
        * @type {
           import("./tipos.js").
-                  Alumno} */
+                  Sombrero} */
       const modelo = {
-        matricula,
-        nombre,
-        telefono,
-        grupo,
+        color,
+        tipo,
+        precio,
+        talla,
         fecha 
       };
-      await daoAlumno.
+      await daoSombrero.
         add(modelo);
-      muestraAlumnos();
+      muestraSombreros();
     } catch (e) {
       muestraError(e);
     }
