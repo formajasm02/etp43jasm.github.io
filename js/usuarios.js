@@ -13,7 +13,7 @@ import {
   
   const SIN_ALUMNOS = /* html */
     `<option value="">
-      -- Sin Alumnos --
+      -- Sin Sombreros --
     </option>`;
   
   const firestore = getFirestore();
@@ -147,7 +147,7 @@ import {
       id) {
     try {
       evt.preventDefault();
-      const alumnoId =
+      const sombreroId =
         getForánea(formData,
           "sombreroId");
       const rolIds =
