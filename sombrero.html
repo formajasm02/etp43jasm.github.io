@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>SOMBRERO</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js">
+    </script>
+  <script src="js/init.js">
+  </script>
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-footer.js">
+    </script>
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>Sombrero</h1>
+      <div class="herramientas">
+        <a href="sombreros.html">
+          Cancelar</a>
+        <button>Guardar</button>
+        <button name="eliminar"
+          type="button">
+          Eliminar
+        </button>
+      </div>
+    </header>
+    <p>
+      <label>
+        Color
+        <input name="color"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Tipo
+        <input name="tipo"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Precio
+        <input name="precio"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Talla
+        <input name="talla"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Fecha de elaboración
+        <input name="fecha" type="date" required>
+      </label>
+    </p>
+    <mi-footer></mi-footer>
+  </form>
+  <script type="module"
+    src="js/CtrlSombrero.js">
+    </script>
+</body>
+</html>
+
