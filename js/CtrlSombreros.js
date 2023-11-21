@@ -13,7 +13,7 @@ import {
   /** @type {HTMLUListElement} */
   const lista = document.
     querySelector("#lista");
-  const daoAlumno =
+  const daoSombrero =
     getFirestore().
       collection("Sombrero");
   
