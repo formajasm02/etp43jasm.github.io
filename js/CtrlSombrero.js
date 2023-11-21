@@ -7,7 +7,7 @@ import {
     muestraError
   } from "../lib/util.js";
   import {
-    muestraAlumnos
+    muestraSombreros
   } from "./navegacion.js";
   import {
     tieneRol
@@ -48,7 +48,7 @@ import {
         /**
          * @type {
             import("./tipos.js").
-                    Alumno} */
+                    Sombrero} */
         const data = doc.data();
         forma.color.value = data.color;
         forma.tipo.value = data.tipo || "";
@@ -85,7 +85,7 @@ import {
       /**
        * @type {
           import("./tipos.js").
-                  Alumno} */
+                  Sombrero} */
       const modelo = {
         color, 
         tipo,
