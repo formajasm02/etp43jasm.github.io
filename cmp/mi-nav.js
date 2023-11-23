@@ -35,19 +35,12 @@ import {
         const roles =
           await cargaRoles(
             usu.email);
-       if (roles.has("Cliente")) {
-          html += /* html */
-            `<li>
-              <a href=
-                "chat.html">Chat</a>
-            </li>`;
-        }
         if (roles.has(
           "Administrador")) {
           html += /* html */
             `<li>
               <a href=
-  "alumnos.html">Alumnos</a>
+  "sombreros.html">Sombreros</a>
             </li>`;
         }
         this.ul.innerHTML += html;
